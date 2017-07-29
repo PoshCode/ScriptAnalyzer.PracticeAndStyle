@@ -31,4 +31,11 @@
     #    version 6.0.0-alpha, on Linux.
     #    PSUseCompatibleCmdlets = @{Compatibility = @("core-6.0.0-alpha-linux")}
     #}
+    $Rules = @{
+        # Enforces Layout-07
+        PSUseConsistentIndentation = @{
+            Enable          = $true
+            IndentationSize = 4
+        }
+    }
 }

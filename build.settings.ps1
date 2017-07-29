@@ -8,15 +8,15 @@ Properties {
     # The root directories for the module's docs, src and test.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
     $DocsRootDir = "$PSScriptRoot\docs"
-    $SrcRootDir  = "$PSScriptRoot\src"
+    $SrcRootDir = "$PSScriptRoot\src"
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
     $TestRootDir = "$PSScriptRoot\test"
 
     # The name of your module should match the basename of the PSD1 file.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
     $ModuleName = Get-Item $SrcRootDir/*.psd1 |
-                      Where-Object { $null -ne (Test-ModuleManifest -Path $_ -ErrorAction SilentlyContinue) } |
-                      Select-Object -First 1 | Foreach-Object BaseName
+        Where-Object { $null -ne (Test-ModuleManifest -Path $_ -ErrorAction SilentlyContinue) } |
+        Select-Object -First 1 | Foreach-Object BaseName
 
     # The $OutDir is where module files and updatable help files are staged for signing, install and publishing.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
@@ -25,7 +25,7 @@ Properties {
     # The local installation directory for the install task. Defaults to your home Modules location.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
     $InstallPath = Join-Path (Split-Path $profile.CurrentUserAllHosts -Parent) `
-                             "Modules\$ModuleName\$((Test-ModuleManifest -Path $SrcRootDir\$ModuleName.psd1).Version.ToString())"
+        "Modules\$ModuleName\$((Test-ModuleManifest -Path $SrcRootDir\$ModuleName.psd1).Version.ToString())"
 
     # Default Locale used for help generation, defaults to en-US.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
@@ -41,7 +41,7 @@ Properties {
 
     # Enable/disable use of PSScriptAnalyzer to perform script analysis.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
-    $ScriptAnalysisEnabled = $false
+    $ScriptAnalysisEnabled = $True
 
     # When PSScriptAnalyzer is enabled, control which severity level will generate a build failure.
     # Valid values are Error, Warning, Information and None.  "None" will report errors but will not

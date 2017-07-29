@@ -3,20 +3,20 @@
 $ModuleName = 'ScriptAnalyzer.PracticeAndStyle'
 
 $ModuleDefinitionName = "$ModuleName.psm1"
-$ModuleManifestName   = "$ModuleName.psd1"
+$ModuleManifestName = "$ModuleName.psd1"
 $ModuleDefinitionPath = "$PSScriptRoot\..\src\$ModuleDefinitionName"
-$ModuleManifestPath   = "$PSScriptRoot\..\src\$ModuleManifestName"
-$ReleaseNotesPath     = "$PSScriptRoot\..\ReleaseNotes.md"
+$ModuleManifestPath = "$PSScriptRoot\..\src\$ModuleManifestName"
 
+Import-Module PSScriptAnalyzer
 
 if (!$SuppressImportModule) {
     # -Scope Global is needed when running tests from inside of psake, otherwise
     # the module's functions cannot be found in the ScriptAnalyzer.PracticeAndStyle\ namespace
     Import-Module $ModuleManifestPath -Scope Global
+
 }
 
-function Test-PowerShellSyntax
-{
+function Test-PowerShellSyntax {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true)]
@@ -31,4 +31,3 @@ function Test-PowerShellSyntax
 
     return ($errors.Count -eq 0)
 }
-
