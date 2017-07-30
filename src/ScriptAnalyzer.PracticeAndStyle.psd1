@@ -2,32 +2,46 @@
 @{
 
     # Script module or binary module file associated with this manifest.
-    RootModule    = 'ScriptAnalyzer.PracticeAndStyle.psm1'
+    RootModule        = 'ScriptAnalyzer.PracticeAndStyle.psm1'
 
     # Version number of this module.
-    ModuleVersion = '0.1.0'
+    ModuleVersion     = '0.1.0'
 
     # Supported PSEditions
     # CompatiblePSEditions = @()
 
     # ID used to uniquely identify this module
-    GUID          = '3a6890fe-8e2e-463a-8c28-acb756cb9e70'
+    GUID              = '3a6890fe-8e2e-463a-8c28-acb756cb9e70'
 
     # Author of this module
-    Author        = 'PoshCode'
+    Author            = 'PoshCode'
 
     # Company or vendor of this module
-    CompanyName   = 'Poshcode'
+    CompanyName       = 'Poshcode'
 
     # Copyright statement for this module
-    Copyright     = '(c) PoshCode. All rights reserved.'
+    Copyright         = '(c) PoshCode. All rights reserved.'
 
     # Description of the functionality provided by this module
-    Description   = 'Script Analyzer rules to support the PowerShell Practice and Style repository'
+    Description       = 'Script Analyzer rules to support the PowerShell Practice and Style repository'
+
+    # Modules that must be imported into the global environment prior to importing this module
+    RequiredModules   = @()
+
+    # Functions to export from this module
+    FunctionsToExport = 'AvoidLongLines'
+
+
+    # List of all files packaged with this module
+    FileList          = @(
+        'ScriptAnalyzer.PracticeAndStyle.psd1',
+        'ScriptAnalyzer.PracticeAndStyle.psm1'
+    )
+
 
     # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData
     # hashtable with additional module metadata used by PowerShell.
-    PrivateData   = @{
+    PrivateData       = @{
 
         PSData = @{
 

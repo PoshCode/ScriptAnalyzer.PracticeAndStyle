@@ -9,6 +9,8 @@ $ModuleManifestPath = "$PSScriptRoot\..\src\$ModuleManifestName"
 
 Import-Module PSScriptAnalyzer
 
+. $PSScriptRoot\Invoke-Rule.ps1
+
 if (!$SuppressImportModule) {
     # -Scope Global is needed when running tests from inside of psake, otherwise
     # the module's functions cannot be found in the ScriptAnalyzer.PracticeAndStyle\ namespace
@@ -31,3 +33,4 @@ function Test-PowerShellSyntax {
 
     return ($errors.Count -eq 0)
 }
+
