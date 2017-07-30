@@ -26,7 +26,7 @@
     Description       = 'Script Analyzer rules to support the PowerShell Practice and Style repository'
 
     # Modules that must be imported into the global environment prior to importing this module
-    RequiredModules   = @()
+    RequiredModules   = @('PSScriptAnalyzer')
 
     # Functions to export from this module
     FunctionsToExport = 'AvoidLongLines'
