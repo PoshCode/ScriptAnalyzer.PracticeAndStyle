@@ -73,3 +73,5 @@ See also the list of [contributors](https://github.com/PoshCode/ScriptAnalyzer.P
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
+
+* Special thanks goes out to [Chris Dent](https://github.com/indented-automation) for his code and assistance with getting the project started.
