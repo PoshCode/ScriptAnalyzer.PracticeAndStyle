@@ -1,5 +1,9 @@
 # ScriptAnalyzer.PracticeAndStyle
 Script Analyzer rules to support the PowerShell Practice and Style repository
+
+| AppVeyor (Windows)                                                                                                                                                                   | Travis CI (Linux / macOS)                                                                                                                   |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| [![Build status](https://ci.appveyor.com/api/projects/status/kwu0a9qe5kbr3wsu/branch/master?svg=true)](https://ci.appveyor.com/project/PoshCode/ScriptAnalyzer-PracticeAndStyle/branch/develop) | [![Build Status](https://travis-ci.org/PoshCode/ScriptAnalyzer.PracticeAndStyle.svg?branch=develop)](https://travis-ci.org/PoshCode/ScriptAnalyzer.PracticeAndStyle) |
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
